@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>THEME & REPETITION LOGIC</title>
+
+  <link rel="icon" href="assets/logo/Mk-logo-modified.png" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/boostrap.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="icon" href="assets/image/MK.png" type="image/png">
+</head>
+
+<body>
+
+  <div class="theme-toggle">
+    <input type="checkbox" id="themeSwitch" />
+    <label for="themeSwitch" class="toggle-btn">
+      <span class="circle"></span>
+    </label>
+  </div>
+
+  <div class="container">
+    <h1 class="header">Dynamic Number Finder</h1>
+
+    <div class="box-group" id="box-container"></div>
+
+    <div class="btn-box">
+      <button class="btn-style" id="max"><i class="ri-arrow-up-line"></i> Max</button>
+      <button class="btn-style" id="min"><i class="ri-arrow-down-line"></i> Min</button>
+      <button class="btn-style" id="random"><i class="ri-shuffle-line"></i> Random</button>
+      <button class="btn-style" id="sum"><i class="ri-add-line"></i> Sum</button>
+      <button class="btn-style" id="avg"><i class="ri-bar-chart-line"></i> Avg</button>
+      <button class="btn-style" id="clear"><i class="ri-refresh-line"></i> Clear</button>
+    </div>
+
+    <h2 id="result"></h2>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="./assets/js/boostrap.js"></script>
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>
