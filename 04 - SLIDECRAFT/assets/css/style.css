@@ -1,0 +1,132 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#111;
+    overflow:hidden;
+    font-family: sans-serif;
+}
+
+.container{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:90%;
+    max-width:1100px;
+    height:600px;
+    background:#000;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 30px 60px rgba(0,0,0,0.6);
+}
+
+.container .slide .item{
+    width:200px;
+    height:300px;
+    position:absolute;
+    top:50%;
+    transform:translate(0,-50%);
+    border-radius:20px;
+    background-position:center;
+    background-size:cover;
+    display:inline-block;
+    transition:0.5s;
+    box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+.slide .item:nth-child(1),
+.slide .item:nth-child(2){
+    top:0;
+    left:0;
+    transform:translate(0,0);
+    border-radius:0;
+    width:100%;
+    height:100%;
+}
+
+.slide .item:nth-child(3){ left:50%; }
+.slide .item:nth-child(4){ left:calc(50% + 220px); }
+.slide .item:nth-child(5){ left:calc(50% + 440px); }
+
+.slide .item:nth-child(n+6){
+    left:calc(50% + 660px);
+    opacity:0;
+}
+
+.item .content{
+    position:absolute;
+    top:50%;
+    left:80px;
+    width:300px;
+    color:white;
+    transform:translateY(-50%);
+    display:none;
+}
+
+.slide .item:nth-child(2) .content{
+    display:block;
+}
+
+.content .name{
+    font-size:42px;
+    font-weight:bold;
+    opacity:0;
+    animation:fadeUp 1s forwards;
+}
+
+.content .des{
+    margin:10px 0;
+    opacity:0;
+    animation:fadeUp 1s 0.3s forwards;
+}
+
+.content button{
+    padding:10px 20px;
+    border:none;
+    border-radius:20px;
+    cursor:pointer;
+    background:white;
+    color:black;
+    opacity:0;
+    animation:fadeUp 1s 0.6s forwards;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(50px);
+        filter:blur(10px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+        filter:blur(0);
+    }
+}
+
+.button{
+    position:absolute;
+    bottom:20px;
+    width:100%;
+    text-align:center;
+}
+
+.button button{
+    width:45px;
+    height:40px;
+    margin:0 5px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    background:white;
+    transition:0.3s;
+}
+
+.button button:hover{
+    background:#444;
+    color:white;
+}
