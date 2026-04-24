@@ -1,0 +1,62 @@
+.rgb-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-45deg, #ff6ec4, #7873f5, #17ead9, #f8ffae);
+  background-size: 400% 400%;
+  animation: rgbAnimation 10s ease infinite;
+  z-index: -1;
+}
+
+@keyframes rgbAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.form-container {
+  margin-top: 6%;
+  max-width: 800px;
+}
+
+.form-card {
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  color: #fff;
+}
+
+.form-control,
+.form-select {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 10px;
+}
+
+.form-label {
+  color: #222;
+  font-weight: 600;
+}
+
+.btn-rgb {
+  background: linear-gradient(90deg, #ff6ec4, #7873f5, #17ead9);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-rgb:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 576px) {
+  .form-container {
+    margin-top: 15%;
+    padding: 10px;
+  }
+}
