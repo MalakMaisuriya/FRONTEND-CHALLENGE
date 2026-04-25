@@ -1,0 +1,82 @@
+.card-stat{
+  background:#18181b;
+  padding:12px;
+  border-radius:12px;
+  transition:0.3s;
+}
+
+.card-stat:hover{
+  background:#27272a;
+  transform:translateY(-2px);
+}
+
+.value{
+  font-size:18px;
+  font-weight:bold;
+  margin-top:4px;
+}
+
+.btn-primary{
+  background:linear-gradient(to right,#9333ea,#ec4899);
+  padding:8px 16px;
+  border-radius:10px;
+  font-size:14px;
+  transition:0.3s;
+  border:none;
+}
+
+.btn-primary:hover{
+  transform:scale(1.05);
+}
+
+.btn-cancel{
+  background:#3f3f46;
+  padding:8px 14px;
+  border-radius:10px;
+  border:none;
+}
+
+.input{
+  width:100%;
+  padding:10px;
+  border-radius:10px;
+  background:#27272a;
+  border:1px solid #3f3f46;
+  outline:none;
+  color:white;
+}
+
+.modal{
+  position:fixed;
+  inset:0;
+  display:none;
+  justify-content:center;
+  align-items:center;
+  background:rgba(0,0,0,0.6);
+}
+
+.modal.active{
+  display:flex;
+}
+
+.modal-box{
+  background:#18181b;
+  padding:20px;
+  border-radius:15px;
+  width:90%;
+  max-width:400px;
+  animation:pop 0.3s ease;
+}
+
+@keyframes pop{
+  from{transform:scale(0.8);opacity:0;}
+  to{transform:scale(1);opacity:1;}
+}
+
+::-webkit-scrollbar{
+  width:6px;
+}
+::-webkit-scrollbar-thumb{
+  background:#555;
+  border-radius:10px;
+}

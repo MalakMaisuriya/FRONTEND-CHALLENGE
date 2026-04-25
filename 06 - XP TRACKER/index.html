@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>XP TRACKER – LEVEL UP YOUR LIFE</title>
+<link rel="icon" href="assets/images/MK.png" type="image/png">
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-zinc-950 text-white min-h-screen flex items-center justify-center">
+
+<div class="w-full max-w-6xl px-4">
+
+  <div class="grid md:grid-cols-3 gap-6">
+    <div class="bg-zinc-900/60 backdrop-blur-lg rounded-2xl p-6 shadow-xl border border-purple-500/20">
+
+      <div class="text-center">
+        <img src="assets/images/Mk-logo-modified.png"
+             class="w-28 h-28 rounded-full mx-auto border-2 border-purple-400 mb-4">
+
+        <h2 class="text-xl font-bold">
+          Welcome,
+          <span id="playerName" class="text-purple-400">Malak</span>
+          <button onclick="editName()" class="ml-2 text-gray-400 hover:text-purple-400">
+            <i class="fas fa-pen"></i>
+          </button>
+        </h2>
+
+        <div class="mt-5">
+          <div class="flex justify-between text-sm mb-1">
+            <span>Level <span id="level">1</span></span>
+            <span><span id="xp">0</span>/100 XP</span>
+          </div>
+
+          <div class="w-full bg-zinc-700 h-2 rounded-full">
+            <div id="xpBar"
+                 class="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full w-[0%] transition-all duration-300"></div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 mt-6 text-sm">
+          <div class="card-stat">💪 Strength <div id="strength" class="value">10</div></div>
+          <div class="card-stat">🧠 Intelligence <div id="intelligence" class="value">10</div></div>
+          <div class="card-stat">⭐ Charisma <div id="charisma" class="value">10</div></div>
+          <div class="card-stat">🎨 Creativity <div id="creativity" class="value">10</div></div>
+        </div>
+
+        <div class="mt-6 bg-zinc-800 p-4 rounded-xl flex justify-between">
+          <span>🪙 Coins</span>
+          <span id="coins" class="text-yellow-400 font-bold">100</span>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="md:col-span-2 bg-zinc-900/60 backdrop-blur-lg rounded-2xl p-6 shadow-xl border border-purple-500/20">
+
+      <div class="flex justify-between items-center mb-6">
+        <h2 class="text-xl font-bold">Active Quests</h2>
+
+        <button onclick="openModal('newTaskModal')" class="btn-primary">
+          + New Quest
+        </button>
+      </div>
+
+      <div id="taskList" class="space-y-4 max-h-[500px] overflow-y-auto pr-2"></div>
+
+    </div>
+
+  </div>
+</div>
+
+<div id="newTaskModal" class="modal">
+  <div class="modal-box">
+
+    <div class="flex justify-between mb-4">
+      <h3 id="modalTitle" class="text-lg font-bold">New Quest</h3>
+      <button onclick="closeModal('newTaskModal')">✖</button>
+    </div>
+
+    <form id="newTaskForm" onsubmit="addNewTask(event)">
+
+      <input id="taskTitle" required placeholder="Quest Title"
+        class="input"/>
+
+      <textarea id="taskDescription" placeholder="Description"
+        class="input mt-3"></textarea>
+
+      <select id="taskRewardType" class="input mt-3">
+        <option value="strength">💪 Strength</option>
+        <option value="intelligence">🧠 Intelligence</option>
+        <option value="charisma">⭐ Charisma</option>
+        <option value="creativity">🎨 Creativity</option>
+      </select>
+
+      <div class="flex justify-end mt-4 gap-3">
+        <button type="button" onclick="closeModal('newTaskModal')" class="btn-cancel">
+          Cancel
+        </button>
+
+        <button id="submitBtn" type="submit" class="btn-primary">
+          Create Quest
+        </button>
+      </div>
+
+    </form>
+
+  </div>
+</div>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
