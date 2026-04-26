@@ -1,0 +1,85 @@
+body {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.navbar {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-radius: 0 0 15px 15px;
+}
+
+.kanban-board {
+  min-height: 75vh;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  padding: 15px;
+  overflow-y: auto;
+  transition: 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.kanban-board:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.kanban-header {
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  background: linear-gradient(135deg, #3b82f6, #9333ea);
+  color: white;
+}
+
+.kanban-card {
+  padding: 12px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  cursor: grab;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.25s ease;
+}
+
+.kanban-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.flying {
+  opacity: 0.5;
+  transform: rotate(5deg) scale(1.05);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #3b82f6, #6366f1);
+  border: none;
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  border: none;
+}
+
+button[id^="Add"] {
+  border-radius: 10px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+button[id^="Add"]:hover {
+  transform: translateY(-2px);
+}
+
+.kanban-board::-webkit-scrollbar {
+  width: 6px;
+}
+
+.kanban-board::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 10px;
+}
