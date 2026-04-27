@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  background: linear-gradient(to left, #C0E1D2, #E5EEE4);
+  font-family: "Courier New", Courier, monospace;
+}
+
+.heading {
+  color: #2f4f4f;
+  text-align: center;
+  padding-top: 15px;
+  font-size: 36px;
+  letter-spacing: 1px;
+}
+
+.info-text {
+  text-align: center;
+  color: #5a6b6b;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  gap: 40px;
+  justify-content: center;
+  padding: 50px;
+}
+
+.note {
+  padding: 17px;
+  border-radius: 15px;
+  resize: none;
+  font-size: 18px;
+  height: 200px;
+  color: #2f4f4f;
+  border: none;
+  outline: none;
+  background: #F6F4E8;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.note::placeholder {
+  color: #999;
+}
+
+.note:hover,
+.note:focus {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transition: all 300ms ease;
+}
+
+.btn {
+  height: 200px;
+  border: none;
+  background: #DC9B9B;
+  border-radius: 15px;
+  font-size: 70px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.btn:hover {
+  background: #c97f7f;
+  transform: scale(1.05);
+  transition: all 300ms ease;
+}
