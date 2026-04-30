@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QUIZIFY</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/MK.png" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+  </head>
+  <body>
+    <body onload="initTerminal()">
+      <div class="app">
+        <div class="topbar">
+          <div class="title">QUIZIFY</div>
+          <div id="timer">⏱ 15</div>
+        </div>
+
+        <div id="terminal" class="terminal"></div>
+
+        <div id="options" class="options"></div>
+
+        <button id="restartBtn" onclick="resetQuiz()" style="display: none">
+           Restart Quiz
+        </button>
+
+        <div class="input-box">
+          <span>></span>
+          <input id="input" onkeypress="handleKey(event)" autocomplete="off" />
+        </div>
+      </div>
+
+      <script src="assets/js/script.js"></script>
+    </body>
+  </body>
+</html>
