@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ECHOFIND</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/MK.png" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <body>
+      <div class="app">
+        <div class="left">
+          <div class="top-bar">
+            <div class="search-box">
+              <input
+                id="searchInput"
+                type="text"
+                placeholder="Search songs..."
+              />
+            </div>
+
+            <div class="quick-menu">
+              <button data-q="trending">Trending</button>
+              <button data-q="top hits">Top Hits</button>
+              <button data-q="sad songs">Sad</button>
+              <button data-q="love songs">Love</button>
+            </div>
+          </div>
+
+          <div id="results"></div>
+        </div>
+
+        <div class="right">
+          <div class="profile">
+            <div class="avatar">
+              <img src="./assets/images/MK.png" alt="logo" width="30px">
+            </div>
+            <div class="profile-info">
+              <h3>Malak</h3>
+              <p id="songCount">0 songs saved</p>
+            </div>
+          </div>
+
+          <div class="playlist-section">
+            <h3>Your Playlist</h3>
+            <div id="playlist"></div>
+          </div>
+        </div>
+      </div>
+
+      <script src="assets/js/script.js"></script>
+    </body>
+</html>
